@@ -1,0 +1,12 @@
+require_relative './config/environment'
+require 'sinatra/activerecord/rake'
+
+desc "Start our app console"
+task :console do
+  Pry.start
+end
+
+desc "this is a test task"
+task :test do
+  puts "Hi, I'm a test"
+end
