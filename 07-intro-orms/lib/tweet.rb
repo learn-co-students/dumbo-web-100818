@@ -1,5 +1,25 @@
 class Tweet
-  attr_accessor :message, :username, :id
+  attr_accessor :message, :username, :age
+
+  def cheese
+    @cheese
+  end
+
+  def cheese=(cheese)
+    @cheese = cheese
+  end
+
+  # Tweet.new("hello!","KevyWevy")
+  # Tweet.new({message: "hello!", username: "KevyWevy", cheese: 'yum'})
+  def initialize(attributes_hash)
+    attributes_hash.each do |key, value|
+      if self.respond_to?("#{key}=")
+        self.send("#{key}=", value)
+      end
+    end
+
+
+  end
 
   def self.all
     sql = <<-SQL
@@ -52,11 +72,5 @@ class Tweet
     else
       puts "Didn't find anything, sorry!"
     end
-  end
-
-  def initialize(message, username, id=nil)
-    @message = message
-    @username = username
-    @id = id
   end
 end
