@@ -1,0 +1,60 @@
+- check out https://twitter.com/omgthatspunny
+
+
+# One to Many Relationships
+
+## Objectives
+
+* Explain domain modeling
+* Implement one object to many objects relationship
+  * One object has many objects
+  * One object belongs to another object
+* Practice passing custom objects as arguments to methods
+* Demonstrate single source of truth
+* Infer type of method (class or instance) through naming conventions
+* review `self`
+
+## Questions
+  * What is a model?
+  * What is a domain?
+  * What is domain modeling?
+  * What is a relationship?
+
+### What's a model?
+    * A class whose primary responsibility is to store data
+
+### What's a Domain?
+    * The subject matter of the application / the problem
+
+### Domain modeling
+    * what models are needed to make up the domain?
+
+### Relationships
+    * How the models inside a domain are connected
+      * Today:
+      * One to many relationships
+        * A single model that keeps track of other models
+        * example: a tree has many leaves
+        * technical terminology -- has_many, belongs_to
+        * Why use these terms?
+        * because they're applicable across many different domains
+
+      * Tomorrow:
+      * many to many relationships
+
+## Single Source of Truth
+* The practice of structuring models and associated data such that every piece of data or every instance is stored exactly once.
+
+## Deliverables
+
+* Create a User class. The class should have these methods:
+  * `#initialize` which takes a username and have
+  * a reader method for the username
+  * `#tweets` that returns an array of Tweet instances
+  * `#post_tweet` that takes a message, creates a new tweet, and adds it to the user's tweet collection
+  * `#print_all_tweets`?
+* Create a Tweet class. The class should have these methods:
+  * `Tweet#content` that returns a string
+  * `Tweet#user` that returns an instance of the user class
+  * `Tweet.all` that returns all the Tweets created.
+  * `Tweet#username` that returns the username of the tweet's user
