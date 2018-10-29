@@ -20,6 +20,13 @@
 * traceroute
 * location - https://en.geoipview.com/
 
+### DNS
+* Phone book metaphor
+
+### Tools:
+* nslookup
+* whois
+
 ## The web
 * Servers and clients
 * Requests and responses
@@ -42,13 +49,13 @@
   * fill out a crud matrix (10 minutes with HTTP verbs)
   * CRUD, SQL, HTTP Verb
 
-### DNS
-* Phone book metaphor
-* Talk about shared hosting
-
-### Tools:
-* nslookup
-* whois
+Verb    | CRUD          | SQL
+--------------------------------
+GET     | Read          | SELECT 
+POST    | Create        | INSERT 
+PUT     | Update (all)  | UPDATE 
+PATCH   | Update (some) | UPDATE 
+DELETE  | Delete        | DELETE 
 
 ### What does a web browser do?
   * chrome dev tools network tab
@@ -65,4 +72,3 @@
 
 ### Further reading
 * https://howhttps.works/
-
