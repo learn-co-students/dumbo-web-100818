@@ -1,0 +1,16 @@
+<form method="GET" action="/vegetables">
+  <label for="search_term">Search term:</label>
+  <input id="search_term" type="text" name="qqqqqqqqqqqqqqqqq" />
+  <input type="submit" value="search" />
+</form>
+
+<!-- <a href="/vegetables">Create a new vegetable</a> -->
+
+
+<ol>
+<% @vegetables.each do |veggie| %>
+  <li>
+  <a href="/vegetables/<%= veggie.id %>"><%= veggie.name %></a>
+  </li>
+<% end %>
+</ol>
