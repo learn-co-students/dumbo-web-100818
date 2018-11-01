@@ -1,0 +1,11 @@
+<h1><%= @vegetable.name %> (belongs to <%= @vegetable.farmer.name %>)</h1>
+<a href="/vegetables">Back to Index</a>
+<a href="/vegetables/<%= @vegetable.id %>/edit">Edit <%= @vegetable.name %></a>
+
+<form method="POST" action="/vegetables/<%= @vegetable.id %>">
+  <input type="hidden" name="_method" value="DELETE" />
+  <button type="submit">Destroy <%= @vegetable.name %></button>
+</form>
+
+<%= @vegetable.emoji * 2000 %>
+

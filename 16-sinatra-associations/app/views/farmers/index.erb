@@ -1,0 +1,15 @@
+<ol>
+<% @farmers.each do |farmer| %>
+  <li>
+  <%= farmer.name %> <span class="swatch" style="background-color: <%= farmer.overalls_color %>;"></span>
+    <ol>
+      <% farmer.vegetables.each do |veggie| %>
+        <li>
+        <%= veggie.name %>
+        <%= veggie.emoji %>
+        </li>
+      <% end %>
+    </ol>
+  </li>
+<% end %>
+</ol>

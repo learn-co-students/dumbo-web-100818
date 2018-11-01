@@ -1,0 +1,25 @@
+<ul>
+    <li>
+      <label for="name">Name</label>
+      <input id="name" type="text" name="vegetable[name]" value="<%= @vegetable.name %>" />
+    </li>
+    <li>
+      <label for="emoji">Emoji</label>
+      <input id="emoji" type="text" name="vegetable[emoji]" value="<%= @vegetable.emoji %>" />
+    </li>
+
+    <li>
+      <label for="farmer_id">Farmer ID</label>
+<!--       <input id="farmer_id" type="text" name="vegetable[farmer_id]" value="<%= @vegetable.farmer_id %>" /> -->
+
+      <select name="vegetable[farmer_id]">
+        <!-- <option value="1">Foo</option> -->
+        <% @farmers.each do |farmer| %>
+          <option value="<%= farmer.id %>">
+            <%= farmer.name %> (<%= farmer.overalls_color %>)</option>
+        <% end %>
+      </select>
+    </li>
+  </ul>
+
+  <input type="submit" value="update" />
