@@ -1,0 +1,12 @@
+<ul>
+<% @dogs.each do |pupper| %>
+  <li>
+    <!-- <a href="/dogs<"><%= pupper.name %></a> -->
+    <%= link_to pupper.name, "/dogs/#{ pupper.id }" %>
+    <%= link_to pupper.name, dog_path(pupper.id) %>
+    <%= link_to pupper.name, dog_path(pupper) %>
+    <%= link_to pupper.name, pupper %>
+  </li>
+<% end %>
+</ul>
+
