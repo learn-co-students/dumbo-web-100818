@@ -1,0 +1,21 @@
+<%= form_for @status_reaction do |f| %>
+
+<ul>
+  <li>
+    <%= f.label :status_id %>
+<!--     <select name="status_id">
+      <option value="1">🎆</option>
+      <option value="2">🌘</option>
+    </select> -->
+    <%= f.collection_select :status_id, Status.all, :id, :body %>
+  </li>
+  <li>
+    <%= f.label :reaction_id %>
+    <%# f.text_field :reaction_id %>
+    <%= f.collection_select :reaction_id, Reaction.all, :id, :emoji_a_lot %>
+  </li>
+</ul>
+
+  <%= f.submit %>
+
+<% end %>

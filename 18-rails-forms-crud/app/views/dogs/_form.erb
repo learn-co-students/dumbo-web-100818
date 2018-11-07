@@ -1,0 +1,18 @@
+<%= form_with model: @dog, local: true do |f| %>
+  <ul>
+    <li>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </li>
+    <li>
+      <%= f.label :fluffiness %>
+      <%= f.number_field :fluffiness %>
+    </li>
+    <li>
+      <%= f.label :color %>
+      <%= f.text_field :color %>
+    </li>
+  </ul>
+
+  <%= f.submit %>
+<% end %>

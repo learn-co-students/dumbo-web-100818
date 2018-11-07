@@ -1,0 +1,10 @@
+<%= form_for @reaction do |f| %>
+  <ul>
+    <li>
+      <%= f.label :emoji %>
+      <%= f.text_field :emoji %>
+    </li>
+    <%= f.submit %>
+  </ul>
+  
+<% end %>

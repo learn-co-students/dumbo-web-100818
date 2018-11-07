@@ -1,0 +1,37 @@
+<h1><%= @status.body %></h1>
+
+<%# @status.status_reactions.each do |status_reaction| %>
+  <%#= status_reaction.reaction.emoji %>
+<%# end %>
+
+<% @status.reactions.each do |reaction| %>
+  <%= reaction.emoji %>
+<% end %>
+
+<%= link_to "edit #{ @status.body }", edit_status_path(@status) %>
+<%= form_for @status, method: :delete do |f| %>
+  <%= f.submit "delete #{ @status.body }" %>
+<% end %>
+
+
+<%= form_for @status_reaction do |f| %>
+
+<ul>
+  <!-- <li> -->
+    <%# f.label :status_id %>
+<!--     <select name="status_id">
+      <option value="1">🎆</option>
+      <option value="2">🌘</option>
+    </select> -->
+    <%= f.hidden_field :status_id, value: @status.id %>
+  <!-- </li> -->
+  <li>
+    <%= f.label :reaction_id %>
+    <%# f.text_field :reaction_id %>
+    <%= f.collection_select :reaction_id, @reactions, :id, :emoji_a_lot %>
+  </li>
+</ul>
+
+  <%= f.submit %>
+
+<% end %>
