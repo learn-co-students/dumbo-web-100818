@@ -1,0 +1,22 @@
+
+<% if @reaction.errors.any? %>
+  <ul>
+  <% @reaction.errors.full_messages.each do |error| %>
+    <li>
+    <%= error %>
+    </li>
+  <% end %>
+  </ul>
+<% end %>
+
+
+<%= form_for @reaction do |f| %>
+  <ul>
+    <li>
+      <%= f.label :emoji %>
+      <%= f.text_field :emoji %>
+    </li>
+    <%= f.submit %>
+  </ul>
+  
+<% end %>

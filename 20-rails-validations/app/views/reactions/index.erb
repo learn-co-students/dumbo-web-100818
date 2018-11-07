@@ -1,0 +1,10 @@
+<h1>Index of reactions</h1>
+<%= link_to "New reaction", new_reaction_path %>
+
+<ol>
+<% @reactions.each do |reaction| %>
+  <li>
+    <%= link_to reaction.emoji, reaction %>
+  </li>
+<% end %>
+</ol>

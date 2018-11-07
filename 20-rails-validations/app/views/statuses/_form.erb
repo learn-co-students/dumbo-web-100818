@@ -1,0 +1,21 @@
+
+<% if @status.errors.any? %>
+  <ul>
+  <% @status.errors.full_messages.each do |error| %>
+    <li>
+    <%= error %>
+    </li>
+  <% end %>
+  </ul>
+<% end %>
+
+
+<%= form_for @status do |f| %>
+  <ul>
+    <li>
+      <%= f.label :body %>
+      <%= f.text_field :body %>
+    </li>
+  </ul>
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,9 @@
+<h1>Index of statuses</h1>
+<%= link_to "New status", new_status_path %>
+<ol>
+<% @statuses.each do |status| %>
+  <li>
+    <%= link_to status.body, status %>
+  </li>
+<% end %>
+</ol>
