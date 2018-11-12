@@ -5,15 +5,19 @@ class ApplicationController < ActionController::Base
   private
   def setup_voting_attrs
 
-    @votes = 5
-    @can_vote = true
 
-    # @message = flash[:message]
-    # @errors = flash[:errors]
+    session["votes"] ||= 5
+    @votes = session["votes"]
+
+    @can_vote = @votes > 0
+    # byebug
+    @message = flash[:message]
+    @errors = flash[:errors]
   end
 
-
-
+  def use_one_vote
+    session["votes"] -= 1
+  end
 
 end
  
