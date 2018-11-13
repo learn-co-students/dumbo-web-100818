@@ -1,0 +1,13 @@
+
+<ol>
+<% @all_votes.each do |vote| %>
+  <li>
+    <%= vote.color.hex %>
+    <%= vote.user ? vote.user.username : "" %>
+
+    <%= form_for vote, method: :delete do |f| %>
+      <%= f.submit "💥" %>
+    <% end %>
+  </li>
+<% end %>
+</ol>

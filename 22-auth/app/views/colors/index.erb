@@ -3,11 +3,13 @@
   <li class="color" style="background-color: #<%= color.hex %>;">
     #<%= color.hex %>
     <span class="votes">Votes: <%= color.votes.length %>
+      <% if @logged_in %>
         <%= form_for [color, Vote.new], local: true do |f| %>
-        <button type="submit" class="<%= @can_vote ? "vote" : "nope" %>">
-          <span class="vote">🗳</span>
-          <span class="nope">🙅‍♀️</span>
-        </button>
+          <button type="submit" class="<%= @can_vote ? "vote" : "nope" %>">
+            <span class="vote">🗳</span>
+            <span class="nope">🙅‍♀️</span>
+          </button>
+        <% end %>
       <% end %>
     </span>
   </li>

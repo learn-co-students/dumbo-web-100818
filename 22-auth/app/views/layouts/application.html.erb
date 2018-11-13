@@ -13,15 +13,28 @@
     <header>
       <nav>
         <ul>
+          <% if @logged_in %>
+            <li>
+              Hey, <%= @user.username.upcase %>!
+            <li>
+            <li>
+              <%= form_with session_path, method: :delete, local: true do |f| %>
+                <%= f.submit "log out" %>
+              <% end %>
+            </li>
+          <% else %>
           <li>
-            <%= link_to "Register", "https://www.youtube.com/watch?v=dQw4w9WgXcQ" %>
+            <%= link_to "Register", new_user_path %>
           </li>
           <li>
-            <%= link_to "Log in", "https://www.youtube.com/watch?v=dQw4w9WgXcQ" %>
+            <%= link_to "Log in", new_session_path %>
           </li>
+          <% end %>
         </ul>
       </nav>
+      <% if @logged_in %>
       <h2>Votes remaining: <%= @votes %></h2>
+      <% end %>
       <% if @message %>
       <div class="message">
         <%= @message %>
