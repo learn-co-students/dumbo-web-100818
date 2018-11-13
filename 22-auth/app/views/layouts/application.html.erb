@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Favorite colors</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <% if @logged_in %>
+          <li>
+            <%= link_to "Log out", "" %>
+          </li>
+          <li>
+            Logged in as: <%= @user.username %>
+          </li>
+          <% else %>
+          <li>
+            <%= link_to "Register", new_user_path %>
+          </li>
+          <li>
+            <%= link_to "Log in", "" %>
+          </li>
+          <% end %>
+        </ul>
+      </nav>
+      <% if (@user) %>
+      <h2>Votes remaining: <%= @votes %></h2>
+      <% end %>
+      <% if @message %>
+      <div class="message">
+        <%= @message %>
+      </div>
+      <% end %>
+      <% if @errors %>
+      <ul class="errors">
+        <% @errors.each do |error| %>
+          <li>
+            <%= error %>
+          </li>
+        <% end %>
+      </ul>
+      <% end %>
+    </header>
+    <%= yield %>
+  </body>
+</html>

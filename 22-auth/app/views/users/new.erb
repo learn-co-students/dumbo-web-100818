@@ -1,0 +1,14 @@
+<%= form_for @new_user do |f| %>
+
+  <%= f.label :username %>
+  <%= f.text_field :username, autocomplete: :off %>
+
+
+  <%= f.label :password %>
+  <%= f.password_field :password, autocomplete: :off %>
+    
+    
+
+  <%= f.submit %>
+
+<% end %>
