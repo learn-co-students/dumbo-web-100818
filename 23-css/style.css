@@ -1,0 +1,24 @@
+li {
+  display: inline;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  font-size: 81px;
+}
+
+.crap {
+  display: flex;
+  flex-wrap: wrap;
+  /*justify-content: space-between;*/
+  align-content: stretch;
+}
+
+.crap li {
+  background: skyblue;
+  flex-grow: 1;
+} 
