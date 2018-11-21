@@ -1,0 +1,21 @@
+.giph {
+  display: block;
+  margin: 10px auto;
+  max-width: 400px;
+}
+
+
+#colors {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+#colors li {
+  width: 400px;
+  height: 200px;
+  color: #fff;
+  font-size: 81px;
+}
+#colors li span {
+  display: block;
+}
