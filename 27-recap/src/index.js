@@ -65,9 +65,9 @@ document.addEventListener('DOMContentLoaded', (e) =>{
 
     // ******** YOU CAN ASSUME YOUR CODE WORKS BUT I DID THIS TOTALLY AS
     // A WAY TO PREVENT PREEMPTIVE SUBMISSIONS
-    // debugger
     if(e.target.dataset.id === undefined) { alert('select a dog');return }
     // ******* I AM ONLY ADDING THIS CONDITIONAL TO AVOID THE CODE TO EXECUTE BELOW
+    // NOT NECESSARY
 
 
 
