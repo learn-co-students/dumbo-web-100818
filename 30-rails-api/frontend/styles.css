@@ -7,12 +7,12 @@ body {
   width: 800px;
   display: grid;
   background-color: orange;
-  grid-template-columns: 0.25fr auto;
+  grid-template-columns: 0.375fr auto;
 }
 
 #character-list {
-
-
+  background-color: pink;
+  font-size: 1.5rem;
 }
 
 #character-detail {
