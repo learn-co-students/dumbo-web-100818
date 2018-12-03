@@ -1,0 +1,20 @@
+body {
+  font-size: 1rem;
+  font-family: 'Roboto';
+}
+
+#container {
+  width: 800px;
+  display: grid;
+  background-color: orange;
+  grid-template-columns: 0.25fr auto;
+}
+
+#character-list {
+
+
+}
+
+#character-detail {
+
+}
