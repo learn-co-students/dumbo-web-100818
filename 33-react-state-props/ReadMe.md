@@ -25,6 +25,10 @@
 ## React State and Props
 
 - Why React?
+  - Keep code modular and reusable
+  - more DRY
+  - more readable
+  - more structure
 - Why the Virtual DOM?
 - npx create-react-app
 - Babel && JSX
