@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import Rapper from "./Rapper";
 import RapperList from "./rapperList";
+import Form from "./NewRapperForm";
 import "./App.css";
 
 class App extends Component {
@@ -17,18 +18,23 @@ class App extends Component {
     });
   };
 
+  rapperSubmitHandler = rapper => {
+    console.log("rapper Submit Handler", rapper);
+    let arr = [...this.state.rapperList, rapper];
+    this.setState({
+      rapperList: arr
+    });
+  };
+
   render() {
+    let list = this.state.rapperList.map(rapper => {
+      return <Rapper key={rapper.name} rapper={rapper} />;
+    });
+
     return (
       <div>
-        <Rapper rapper={this.state.rapperList[0]} />
-        <h1>
-          Name:
-          {this.state.day ? (
-            <h1 onClick={this.clickHandler}>Chicken Leg</h1>
-          ) : (
-            <h1 onClick={this.clickHandler}>Winter is Coding</h1>
-          )}
-        </h1>
+        <Form submitHandler={this.rapperSubmitHandler} />
+        {list}
       </div>
     );
   }

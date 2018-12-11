@@ -30,3 +30,8 @@
     transform: rotate(360deg);
   }
 }
+
+.rapper {
+  width: 30%;
+  height: 30%;
+}
