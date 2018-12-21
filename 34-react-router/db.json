@@ -1,0 +1,52 @@
+{
+  "potter-stuff": [
+    {
+      "name": "Harry Potter",
+      "age": 17,
+      "house": "Gryffindor",
+      "role": "student",
+      "image1": "http://www.univers-series.com/wp-content/uploads/2016/02/harrypotter.jpeg",
+      "image2": "https://timedotcom.files.wordpress.com/2014/07/301386_full1.jpg"
+    },
+    {
+      "name": "Hermione Granger",
+      "age": 17,
+      "house": "Gryffindor",
+      "role": "student",
+      "image1": "https://wallpapersite.com/images/pages/pic_w/8936.jpg",
+      "image2": "https://vignette.wikia.nocookie.net/harrypotter/images/7/7e/Hermione-HBP-hermione-granger-16048675-1919-2560.jpg/revision/latest?cb=20140628051753"
+    },
+    {
+      "name": "Ron Weasley",
+      "age": 17,
+      "house": "Gryffindor",
+      "role": "student",
+      "image1": "http://images4.fanpop.com/image/photos/23000000/DH-Part-II-ronald-weasley-23081519-500-296.jpg",
+      "image2": "https://images.pottermore.com/bxd3o8b291gf/4kRGmTOvVYmIwsOikwcuUw/8b8f2e4ffcc1a5218bafe615f976abb0/Ron_Weasley_WB_F1_Ron_with_Scabbers_on_shoulder_00393692.jpg?w=1200"
+    },
+    {
+      "name": "Draco Malfoy",
+      "age": 17,
+      "house": "Slytherin",
+      "role": "student",
+      "image1": "https://cdn.movieweb.com/img.news.tops/NEh934QRmEyekk_2_b/Tom-Felton-Draco-Malfoy-No-More-Harry-Potter.jpg",
+      "image2": "https://qph.fs.quoracdn.net/main-qimg-0f9603b2605dce5b8dfb6d27028b02ab"
+    },
+    {
+      "name": "Severus Snape",
+      "age": 38,
+      "house": "Slytherin",
+      "role": "professor",
+      "image1": "https://vignette.wikia.nocookie.net/villains/images/1/12/Snape-will-never-die-severus-snape-22970808-1600-2118.jpg/revision/latest?cb=20170304205903",
+      "image2": "https://vignette.wikia.nocookie.net/harrypotter/images/a/a3/Severus_Snape.jpg/revision/latest?cb=20150307193047"
+    },
+    {
+      "name": "Minerva McGonagall",
+      "age": 75,
+      "house": "Gryffindor",
+      "role": "professor",
+      "image1": "https://fsmedia.imgix.net/21/fd/33/16/2844/4ec3/bae9/57d38001e216/sonserina.jpeg?rect=0%2C0%2C1920%2C959&dpr=2&auto=format%2Ccompress&w=650",
+      "image2": "https://imgix.bustle.com/rehost/2016/9/13/4685a819-e442-4e36-af5b-9c8c42bfbf00.jpg?w=970&h=582&fit=crop&crop=faces&auto=format&q=70"
+    }
+  ]
+}
